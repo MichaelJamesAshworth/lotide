@@ -10,7 +10,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  const result = eqArrays (arrayOne, arrayTwo);
+  const result = eqArrays(arrayOne, arrayTwo);
   if (result) {
     console.log(`🚗💨💨 Assertion Passed: ${arrayOne} === ${arrayTwo}\n`);
   } else {
@@ -18,20 +18,14 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
-/*array = [1, 2, 3, 4];
-let oddMiddleElement = Math.floor(array.length/2);
-let evenMiddleElement = array.length / 2 - 1;
-console.log(array[evenMiddleElement][]);
-*/
-
- const getMidElement = function(array) {
+const getMidElement = function(array) {
   const middle = array.length / 2;
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 !== 0) {
     return [array[Math.floor(middle)]];
   } else {
-    return [array[middle - 1], array[middle]]
+    return [array[middle - 1], array[middle]];
   }
 };
 
@@ -40,7 +34,7 @@ console.log(array[evenMiddleElement][]);
 assertArraysEqual(getMidElement([1]), []); // => []
 assertArraysEqual(getMidElement([1, 2]), []); // => []
 
- //ODD
+//ODD
 assertArraysEqual(getMidElement([1, 2, 3]), [2]);
 assertArraysEqual(getMidElement([1, 2, 3, 4, 5]), [3]);
  
