@@ -18,21 +18,32 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
-array = [1, 2, 3, 4];
+/*array = [1, 2, 3, 4];
 let oddMiddleElement = Math.floor(array.length/2);
 let evenMiddleElement = array.length / 2 - 1;
 console.log(array[evenMiddleElement][]);
-/*
- const middleElement = function(array) {
-  let oddMiddleElement = Math.floor(array.length/2);
-  let evenMiddleElement = ;
+*/
+
+ const getMidElement = function(array) {
+  const middle = array.length / 2;
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 !== 0) {
-    return array[middleElement];
+    return [array[Math.floor(middle)]];
+  } else {
+    return [array[middle - 1], array[middle]]
   }
 };
-*/
-//Test Code
-// middle([1]) // => []
-// middle([1, 2]) // => []
+
+//TEST CODE
+//LESS THAN 2
+assertArraysEqual(getMidElement([1]), []); // => []
+assertArraysEqual(getMidElement([1, 2]), []); // => []
+
+ //ODD
+assertArraysEqual(getMidElement([1, 2, 3]), [2]);
+assertArraysEqual(getMidElement([1, 2, 3, 4, 5]), [3]);
+ 
+//EVEN
+assertArraysEqual(getMidElement([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(getMidElement([1, 2, 3, 4, 5, 6]), [3, 4]);
