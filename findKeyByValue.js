@@ -11,7 +11,7 @@ const findKeyByValue = function(objectToBeScanned, valueToReturn) {
     if (objectToBeScanned[key] === valueToReturn) {
       return key;
     } 
-  } return undefined;
+  } 
 };
 
 //TEST CODE
