@@ -9,8 +9,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true;
 };
 
-const assertArraysEqual = function (arrayOne, arrayTwo) {
-  const result = eqArrays (arrayOne, arrayTwo);
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  const result = eqArrays(arrayOne, arrayTwo);
   if (result) {
     console.log(`🚗💨💨 Assertion Passed: ${arrayOne} === ${arrayTwo}\n`);
   } else {
