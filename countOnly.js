@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) { // let i = 0; i > allItem.length; i++
-    if (itemsToCount[item]) { //this is saying if
+    if (itemsToCount[item]) { //this is saying if the object (that is passed to the function) has the item(what were currently looping over)
       if (results[item]) { //This is saying if results has a key value that exists, execute the following code
         results[item] += 1;
       } else {
