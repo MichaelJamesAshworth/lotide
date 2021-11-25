@@ -6,40 +6,22 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-stringtoCount = "L H L"
-//objR = {}
-//item = 'L'
-//Array[i] = item
+//LHL
+//item ==='L'
+//objectResult[item] === objectResult["L"] === objectResult.L
 
 const countLetters = function(stringtoCount,) {
   const objectResult = {};
   for (const item of stringtoCount) {
-    if (!stringtoCount[item] === " ") { // we want NON-space characters
+    if (item !== " ") { // we want NON-space characters
       if (objectResult[item] === undefined) { //if objectResult is missing the property then...
         objectResult[item] = 1; //L : 1
-        } else {
-          objectResult[item] += 1;
+      } else {
+        objectResult[item] += 1;
       }
-    } 
-  }
-    return objectResult;
-  }
-
-//if character is not white{
-  
-//}
-
-// count it
-
-
-countLetters("LHL")
-//loop though that string
-//have an empty object variable
-//logic of the loop needs populate the empty variable
-//count the occurences of each letter in the string 
-//  --add keys/value
-//  --somehow tie to empty variable
-//  --only add character if its a letter, not a space
-//return the object variable
-//
-
+    }
+  } return objectResult;
+};
+assertEqual(countLetters('LHL'), {});
+const arg = process.argv[2];
+console.log(countLetters(arg));
