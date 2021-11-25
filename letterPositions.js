@@ -22,12 +22,12 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 const letterPositions = function(sentanceInput) {
   const objectResult = {};
   for (let i = 0; i < sentanceInput.length; i++) {
-    let letterHolder = sentanceInput[i];
-    if (letterHolder !== " ") { // we want NON-space characters
-      if (objectResult[letterHolder] === undefined) { //if objectResult is missing the property then...
-        objectResult[letterHolder] = [i];
+    let letterKey = sentanceInput[i];
+    if (letterKey !== " ") { // we want NON-space characters
+      if (objectResult[letterKey] === undefined) { //if objectResult is missing the property then...
+        objectResult[letterKey] = [i];
       } else {
-        objectResult[letterHolder].push(i);
+        objectResult[letterKey].push(i);
       }
     }
   }
