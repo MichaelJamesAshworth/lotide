@@ -26,10 +26,10 @@ const takeUntil = function(array, callback) {
   for (let item of array) {
     if (callback(item)) {
       return results;
-    } 
+    }
     results.push(item);
-  };
-}
+  }
+};
 
 const results1 = takeUntil(data1, x => x < 0);
 const results2 = takeUntil(data2, x => x === ',');
