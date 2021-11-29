@@ -1,3 +1,5 @@
+const assertArraysEqual = require('../assertArraysEqual');
+const getMidElement = require('../middle');
 
 //TEST CODE
 //LESS THAN 2
